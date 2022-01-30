@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Dolomit bányák</title>
+</head>
+
+<body>
+    <div id="szunetelo">
+        <div id="header">
+            <h1>Bányászati információs oldal</h1>
+        </div>
+        <div id="body">
+            <p>Azon települések listája, ahol Dolomit bányák üzemelnek:</p>
+            <table>
+                <tr>
+                    <th>Település:</th>
+                    <th>Fedőszint:</th>
+                    <th>Feküszint:</th>
+                </tr>
+                <% dolomit.forEach(dolom=> { %>
+                    <tr>
+                        <td>
+                            <%= dolom.telepules %>
+                        </td>
+                        <td>
+                            <%= dolom.fedoszint %> mBf
+                        </td>
+                        <td>
+                            <%= dolom.fekuszint %> mBf
+                        </td>
+                    </tr>
+                    <% }) %>
+            </table>
+
+        </div>
+        <div id="gomb"><a href="/"><button type="button" class="btn btn-success">Vissza a Főoldalra!</button></a></div>
+        <hr>
+        <div id="footer">
+            <p>Összeállította: Rékási László</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

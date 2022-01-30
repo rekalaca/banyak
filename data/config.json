@@ -1,0 +1,7 @@
+{
+    "dbhost": "localhost",
+    "dbname": "mbt",
+    "dbuser": "root",
+    "dbpasswd": "",
+    "dbport": "3306"
+}
