@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const app = express();
-const { szunetel, dolomit, bezar } = require("./modules/mysql");
+const { szunetel, dolomit, bezaras } = require("./modules/mysql");
 const port = 4444;
 
 app.set("view engine", "ejs");
@@ -33,10 +33,10 @@ app.get("/dolomit", (req, res) => {
     });
 });
 
-app.get("/bezar", (req, res) => {
-    bezar((err, bezar) => {
+app.get("/bezaras", (req, res) => {
+    bezaras((err, bezaras) => {
         if (err) throw err;
-        res.render("bezar", { bezar });
+        res.render("bezaras", { bezaras });
     });
 });
 

@@ -32,7 +32,7 @@ const dolomit = (callback) => {
   });
 };
 
-const bezar = (callback) => {
+const bezaras = (callback) => {
   const mySelect =
     `SELECT DISTINCT telepules FROM telek WHERE allapot = "B";`;
   connection.query(mySelect, (err, result) => {
@@ -45,4 +45,4 @@ const bezar = (callback) => {
 
 
 
-module.exports = { szunetel, dolomit, bezar };
+module.exports = { szunetel, dolomit, bezaras };
