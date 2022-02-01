@@ -34,7 +34,7 @@ const dolomit = (callback) => {
 
 const bezaras = (callback) => {
   const mySelect =
-    `SELECT DISTINCT telepules FROM telek WHERE allapot = "B";`;
+    `SELECT DISTINCTROW telepules FROM telek WHERE allapot IN ("M", "S","T","B") AND telepules NOT IN (SELECT telepules FROM telek WHERE allapot IN ("M", "S","T"));`;
   connection.query(mySelect, (err, result) => {
     if (err) callback(err, null);
     callback(null, JSON.parse(JSON.stringify(result)));
