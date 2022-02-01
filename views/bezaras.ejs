@@ -15,18 +15,22 @@
         </div>
         <div id="body">
             <table>
-                <tr>
+                
+                <% if( bezaras.length === 0) {%>
+                    <h3>Nincs a feltételnek megfelelő település</h3>
+                <% }
+                else {%>
+                    <tr>
                     <th>Azon települések listája, ahol minden bányát bezártak:</th>
                 </tr>
-                <% bezaras.forEach(bezar=> {
-                    console.log(typeof bezar);
+                 <%bezaras.forEach(bezar=> {
                     %>
                     <tr>
                         <td>
                             <%= bezar.telepules %>
                         </td>
                     </tr>
-                    <% }) %>
+                    <% })} %>
             </table>
 
         </div>
