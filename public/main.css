@@ -43,3 +43,7 @@ hr{
     width: 70%;
     margin: 0 auto 0 auto;
 }
+h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+}
